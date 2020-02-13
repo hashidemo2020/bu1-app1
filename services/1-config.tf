@@ -6,8 +6,6 @@ provider "aws" {
   region = var.aws_region
 }
 
-
-
 data "terraform_remote_state" "ecc_view" {
   backend = "remote"
   config = {

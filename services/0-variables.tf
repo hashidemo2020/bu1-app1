@@ -6,7 +6,7 @@ variable "project_name" {
     description = "the name for this project or application"
 }
 
-variable "remote_organization" {
+variable "bu_name" {
   description = "org where Remote Workspace for ECC View is defined"
 }
 

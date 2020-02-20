@@ -11,7 +11,7 @@ data "terraform_remote_state" "ecc_view" {
   config = {
     organization = var.remote_organization
     workspaces = {
-      name = var.view_remote_workspace_name
+      name = var.config_version
     }
   }
 }

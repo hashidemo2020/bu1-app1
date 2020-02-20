@@ -10,7 +10,7 @@ variable "remote_organization" {
   description = "org where Remote Workspace for ECC View is defined"
 }
 
-variable "view_remote_workspace_name" {
+variable "config_version" {
   description = "Remote Workspace where ECC View is defined"
 }
 

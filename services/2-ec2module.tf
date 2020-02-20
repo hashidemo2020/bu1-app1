@@ -1,5 +1,5 @@
 module "ec2-instance" {
-  source  = "app.terraform.io/fidelity_tfe_demo_v2/ec2-instance/aws"
+  source  = "app.terraform.io/FMR_BU1/ec2-instance/aws"
   version = "3.1.1"
 
   name                   = var.project_name

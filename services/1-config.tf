@@ -9,7 +9,7 @@ provider "aws" {
 data "terraform_remote_state" "ecc_view" {
   backend = "remote"
   config = {
-    organization = var.remote_organization
+    organization = var.bu_name
     workspaces = {
       name = var.config_version
     }

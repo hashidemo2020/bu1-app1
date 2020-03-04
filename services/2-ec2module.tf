@@ -10,7 +10,7 @@ module "ec2-instance" {
   key_name               = var.instance_key_name
   monitoring             = true
   #vpc_security_group_ids = [${aws_security_group.lc_security_group.id}]
-  subnet_id              = data.terraform_remote_state.ecc_view.outputs.services_subnet_id
+  subnet_id              = module.landingzone-view.services_subnet_id
 
   tags = var.default_tags
 }

@@ -6,12 +6,12 @@ provider "aws" {
   region = var.aws_region
 }
 
-data "terraform_remote_state" "ecc_view" {
-  backend = "remote"
-  config = {
-    organization = var.bu_name
-    workspaces = {
-      name = var.config_version
-    }
-  }
+module "landingzone-view" {
+  source  = "app.terraform.io/FMR_BU1/landingzone-view/ecc"
+  version = "1.3.0"
+
+  remote_organization = var.remote_organization
+  subnet_remote_workspace_name = var.subnet_remote_workspace_name
+  token_org = var.token_org
+  bu_name = var.bu_name
 }

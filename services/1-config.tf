@@ -6,12 +6,12 @@ provider "aws" {
   region = var.aws_region
 }
 
-module "landingzone-view" {
-  source  = "app.terraform.io/FMR_BU1/landingzone-view/ecc"
-  version = "1.3.0"
+data "terraform_remote_state" "subnet" {
+  backend = "atlas"
 
-  remote_organization = var.remote_organization
-  subnet_remote_workspace_name = var.subnet_remote_workspace_name
-  token_org = var.token_org
-  bu_name = var.bu_name
+  config = {
+    address = "https://app.terraform.io"
+    name = "${var.remote_organization}/${var.subnet_remote_workspace_name}"
+    access_token = var.token_org
+  }
 }

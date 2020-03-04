@@ -3,7 +3,7 @@ module "ec2-instance" {
   version = "3.1.1"
 
   name                   = var.project_name
-  instance_count         = 2
+  instance_count         = 1
 
   ami                    = var.ec2_ami
   instance_type          = var.instance_type

@@ -1,6 +1,6 @@
 module "ec2-instance" {
   source  = "app.terraform.io/FMR_BU1/ec2-instance/aws"
-  version = "3.1.1"
+  version = "4.0.0"
 
   name                   = var.project_name
   instance_count         = 1
